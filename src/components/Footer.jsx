@@ -1,0 +1,24 @@
+import React from 'react';
+
+export default function Footer() {
+    const currentYear = new Date().getFullYear();
+
+    return (
+        <footer className="mt-8 text-center text-gray-400 text-sm">
+            <div className="flex items-center justify-center gap-x-2">
+                <span>© {currentYear}</span>
+                <a
+                    href="https://hillnose.xyz"
+                    className="text-gray-300 hover:underline"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    hillnose.xyz
+                </a>
+                <span className="text-red-400">❤️</span>
+                <span aria-hidden className="text-gray-500">•</span>
+                <span className="ml-1">All rights reserved.</span>
+            </div>
+        </footer>
+    );
+}

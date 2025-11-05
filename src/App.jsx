@@ -1,23 +1,30 @@
-import Header from './components/header.jsx'
+import Avatar from './components/Avatar.jsx'
+import Bio from './components/Bio.jsx'
+import Card from './components/Card.jsx'
+import Socials from './components/Socials.jsx'
+import Footer from './components/Footer.jsx'
 
 export default function App() {
     return (
-        <div className="min-h-screen w-full relative bg-black">
-            {/* Golden Horizon Background with Top Glow */}
+        <div className="relative bg-black min-h-dvh">
+            {/* Background */}
             <div
                 className="absolute inset-0 z-0"
                 style={{
-                    background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(251, 191, 36, 0.25), transparent 70%), #000000",
+                    background:
+                        "radial-gradient(ellipse 80% 90% at 50% 0%, rgba(251, 191, 36, 0.25), transparent 70%), #000000",
                 }}
             />
 
-            {/* Your Content/Components */}
-            <div className="relative z-10">
-                <Header />
-                <div className="relative z-10 flex flex-col items-center justify-center text-center text-gray-300 px-6 mt-24">
-                    <h1>hillnose.xyz links</h1>
+            <main className="relative z-10 grid min-h-dvh place-items-center px-4 text-white">
+                <div className="w-full max-w-md text-center flex flex-col items-center gap-6">
+                    <Avatar />
+                    <Bio />
+                    <Socials />
+                    <Card />
+                    <Footer />
                 </div>
-            </div>
+            </main>
         </div>
-    );
+    )
 }
