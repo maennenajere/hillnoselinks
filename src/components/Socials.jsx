@@ -2,11 +2,11 @@ import React from 'react'
 import { Instagram, Linkedin, Github, Send, Mail } from 'lucide-react'
 
 const links = [
-	{ href: 'https://www.instagram.com/jeremaennena/', label: 'Instagram', Icon: Instagram },
-	{ href: 'https://www.linkedin.com/in/jeremaennena/', label: 'LinkedIn', Icon: Linkedin },
-	{ href: 'https://github.com/maennenajere', label: 'GitHub', Icon: Github },
-	{ href: 'https://t.me/maeennenae', label: 'Telegram', Icon: Send },
-	{ href: 'mailto:contact@hillnose.xyz', label: 'Email', Icon: Mail },
+	{ href: 'https://www.instagram.com/jeremaennena/', label: 'instagram', Icon: Instagram },
+	{ href: 'https://www.linkedin.com/in/jeremaennena/', label: 'linkedin', Icon: Linkedin },
+	{ href: 'https://github.com/maennenajere', label: 'github', Icon: Github },
+	{ href: 'https://t.me/maeennenae', label: 'telegram', Icon: Send },
+	{ href: 'mailto:contact@hillnose.xyz', label: 'email', Icon: Mail },
 ]
 
 const Socials = () => {
@@ -19,8 +19,9 @@ const Socials = () => {
 					target="_blank"
 					rel="noopener noreferrer"
 					aria-label={label}
-					className="text-gray-400 hover:text-white transition-colors"
 					title={label}
+					className="text-gray-400 hover:text-white transition-colors"
+					data-umami-event={`badge_${label}`}
 				>
 					<Icon size={25} className="stroke-current" aria-hidden="true" />
 				</a>

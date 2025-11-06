@@ -16,7 +16,7 @@ export default function App() {
                 }}
             />
 
-            <main className="relative z-10 grid min-h-dvh place-items-center px-4 text-white">
+            <main className="relative z-10 grid min-h-dvh place-items-center px-4 text-white p-10">
                 <div className="w-full max-w-md text-center flex flex-col items-center gap-6">
                     <Avatar />
                     <Bio />
