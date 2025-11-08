@@ -3,6 +3,7 @@ import Bio from './components/Bio.jsx'
 import Card from './components/Card.jsx'
 import Socials from './components/Socials.jsx'
 import Footer from './components/Footer.jsx'
+import Quote from './components/Quote.jsx'
 
 export default function App() {
     return (
@@ -22,6 +23,7 @@ export default function App() {
                     <Bio />
                     <Socials />
                     <Card />
+                    <Quote />
                     <Footer />
                 </div>
             </main>
