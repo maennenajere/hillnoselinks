@@ -1,10 +1,15 @@
+import React from 'react'
+import { useTranslation } from 'react-i18next'
+
 export default function Card() {
+    const { t } = useTranslation()
+
     const items = [
-        { cardTitle: 'Professional / Work', title: 'Portfolio', description: 'WIP', link: 'https://www.hillnose.xyz' },
-        { cardTitle: '', title: 'LinkedIn', description: 'Connect with my professional profile', link: 'https://www.linkedin.com/in/jeremaennena' },
-        { cardTitle: '', title: 'GitHub', description: 'where I git push --force my code', link: 'https://github.com/maennenajere' },
-        { cardTitle: 'Projects', title: 'Discover Beaky', description: 'A Raspberry Pi–powered birdhouse camera + IoT project', link: 'https://beaknet.eu/' },
-        { cardTitle: 'Contact ☎️', title: 'Get in touch', description: '', link: 'mailto:contact@hillnose.xyz' },
+        { cardTitle: t('card.professional'), title: 'Portfolio', description: t('card.portfolio_description'), link: 'https://www.hillnose.xyz' },
+        { cardTitle: '', title: 'LinkedIn', description: t('card.linkedin_description'), link: 'https://www.linkedin.com/in/jeremaennena' },
+        { cardTitle: '', title: 'GitHub', description: t('card.github_description'), link: 'https://github.com/maennenajere' },
+        { cardTitle: t('card.projects'), title: 'Beaky', description: t('card.beaky_description'), link: 'https://beaknet.eu/' },
+        { cardTitle: t('card.contact'), title: t('card.getInTouch'), description: t('card.getInTouch_description'), link: 'mailto:contact@hillnose.xyz' },
         { cardTitle: '', title: 'Telegram', description: '', link: 'https://t.me/maeennenae' },
     ];
 
@@ -18,7 +23,7 @@ export default function Card() {
                     <div>
                         {cardTitle ? (
                             <div className="mb-2">
-                                <h1 className="text-sm font-semibold text-zinc-300 uppercase tracking-wide mb-3">
+                                <h1 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
                                     {cardTitle}
                                 </h1>
                             </div>

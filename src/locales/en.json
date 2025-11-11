@@ -1,0 +1,25 @@
+{
+  "bio": {
+    "handle": "@jeremaennena",
+    "description": "Full-Stack & Cloud Enthusiast ☕ ICT Engineering Student @ OAMK | 5+ Years Industrial Work Experience | Transitioning to IT"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "card": {
+    "professional": "Professional / Work",
+    "projects": "Projects",
+    "contact": "Contact ☎",
+    "getInTouch": "Get in Touch",
+
+    "portfolio_description": "WIP",
+    "linkedin_description": "Connect with my professional profile",
+    "github_description": "Work on GitHub",
+    "beaky_description": "A Raspberry Pi–powered birdhouse camera + IoT project",
+    "getInTouch_description": "Send me an email"
+  },
+  "cta": {
+    "web": "Need a website? Send me a message."
+  }
+}
+

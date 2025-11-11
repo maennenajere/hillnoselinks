@@ -1,0 +1,24 @@
+{
+  "bio": {
+    "handle": "@jeremaennena",
+    "description": "Full-stack- ja pilviteknologioista kiinnostunut ☕ ICT-insinööriopiskelija @ OAMK | Yli 5 vuotta teollista työkokemusta | Siirtymässä IT-alalle"
+  },
+  "footer": {
+    "rights": "Kaikki oikeudet pidätetään."
+  },
+  "card": {
+    "professional": "Ammatillinen",
+    "projects": "Projektit",
+    "contact": "Yhteystiedot ☎️",
+    "getInTouch": "Ota yhteyttä",
+
+    "portfolio_description": "Työn alla",
+    "linkedin_description": "Ammatillinen profiilini",
+    "github_description": "GitHub-sisältö",
+    "beaky_description": "Raspberry Pi -pohjainen linnunpönttökamera + IoT-projekti",
+    "getInTouch_description": "Lähetä minulle sähköpostia"
+  },
+  "cta": {
+    "web": "Tarvitsetko verkkosivuja? Laita viestiä."
+  }
+}
