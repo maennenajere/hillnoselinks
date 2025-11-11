@@ -1,7 +1,9 @@
 import React from 'react';
+import {useTranslation} from "react-i18next";
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
+    const { t } = useTranslation()
 
     return (
         <footer className="text-center text-gray-400 text-sm">
@@ -17,7 +19,7 @@ export default function Footer() {
                 </a>
                 <span className="text-red-400">❤️</span>
                 <span aria-hidden className="text-gray-500">•</span>
-                <span className="ml-1">All rights reserved.</span>
+                <span className="ml-1">{t('footer.rights')}</span>
             </div>
         </footer>
     );
