@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 export default function Card() {
     const { t } = useTranslation()
 
+    const audioRef = useRef(new Audio('/sound/pop.mp3'));
+
+    const click = () => {
+        audioRef.current.currentTime = 0;
+        audioRef.current.play();
+    };
+
     const items = [
-        { cardTitle: t('card.professional'), title: 'Portfolio', description: t('card.portfolio_description'), link: 'https://www.hillnose.xyz' },
+        { cardTitle: t('card.professional'), title: 'Portfolio', description: t('card.portfolio_description'), link: 'https://hillnose.xyz' },
         { cardTitle: '', title: 'LinkedIn', description: t('card.linkedin_description'), link: 'https://www.linkedin.com/in/jeremaennena' },
         { cardTitle: '', title: 'GitHub', description: t('card.github_description'), link: 'https://github.com/maennenajere' },
         { cardTitle: t('card.projects'), title: 'Beaky', description: t('card.beaky_description'), link: 'https://beaknet.eu/' },
@@ -44,6 +51,7 @@ export default function Card() {
                         rel="noopener noreferrer"
                         className="block"
                         data-umami-event={eventName}
+                        onClick={click}
                     >
                         {content}
                     </a>

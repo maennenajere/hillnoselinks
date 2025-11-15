@@ -27,6 +27,3 @@ package-lock.json
 *.njsproj
 *.sln
 *.sw?
-
-/src/assets/photo/*
-!/src/assets/photo/avatar.png
