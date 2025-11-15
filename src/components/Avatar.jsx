@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import photo from "@/assets/photo/avatar.png"
+import photo from "@/assets/photo/avatar.webp"
 
 export function Avatars() {
     return (
@@ -12,7 +12,7 @@ export function Avatars() {
                     draggable={false}
                     onContextMenu={(e) => e.preventDefault()}
                 />
-                <AvatarFallback>
+                <AvatarFallback className="text-xl font-bold text-white bg-zinc-800 rounded-full">
                     JM
                 </AvatarFallback>
             </Avatar>
