@@ -88,6 +88,7 @@ export default function Card() {
                             rel="noopener noreferrer"
                             className="block"
                             onClick={click}
+                            data-umami-event={`${action || title}-link`}
                         >
                             {content}
                         </a>
