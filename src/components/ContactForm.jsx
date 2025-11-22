@@ -32,7 +32,8 @@ function ContactForm({ onSuccess }) {
         hour12: true
     });
 
-    const hour = now.getHours();
+    const helsinkiTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Helsinki' }));
+    const hour = helsinkiTime.getHours();
     const statusKey = (hour >= 7 && hour <= 22)
         ? 'contactForm.awake'
         : 'contactForm.sleeping';
