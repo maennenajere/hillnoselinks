@@ -7,18 +7,34 @@
     "rights": "Kaikki oikeudet pidätetään."
   },
   "card": {
-    "professional": "Ammatillinen",
-    "projects": "Projektit",
+    "professional": "Ammatillinen 💼",
+    "projects": "Projektit \uD83D\uDCC1",
     "contact": "Yhteystiedot ☎️",
-    "getInTouch": "Ota yhteyttä",
-
     "portfolio_description": "Työn alla",
     "linkedin_description": "Ammatillinen profiilini",
     "github_description": "GitHub-sisältö",
     "beaky_description": "Raspberry Pi -pohjainen linnunpönttökamera + IoT-projekti",
     "getInTouch_description": "Lähetä minulle sähköpostia"
   },
+  "contactForm": {
+    "open": "Ota yhteyttä",
+    "open_description": "Lähetä minulle sähköpostia!",
+    "title": "Ota yhteyttä",
+    "description": "Täytä alla oleva lomake lähettääksesi minulle viestin.",
+    "emailPlaceholder": "esim. nimesi@example.fi",
+    "messagePlaceholder": "Hei Jere...",
+    "name": "Nimi",
+    "email": "Sähköposti",
+    "message": "Viesti",
+    "send": "Lähetä",
+    "cancel": "Peruuta",
+    "success": "Viestisi on lähetetty onnistuneesti! Vastaan sinulle pian.",
+    "error": "Viestin lähettämisessä tapahtui virhe. Yritä myöhemmin uudelleen.",
+    "timeMessage": "Minulle kello on {{time}}, joten olen {{status}}. Palaan sinulle pian.",
+    "awake": "todennäköisesti hereillä",
+    "sleeping": "todennäköisesti nukkumassa"
+  },
   "cta": {
-    "web": "Tarvitsetko verkkosivuja? Laita viestiä."
+    "web": "Tarvitsetko verkkosivuja? Laita heti viestiä!"
   }
 }

@@ -7,7 +7,7 @@ const Bio = () => {
     return (
         <section className="text-gray-300 relative z-10">
             <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-3">{t('bio.handle')}</h2>
+                <h1 className="text-3xl font-bold mb-3">{t('bio.handle')}</h1>
                 <p className="text-lg text-accent leading-relaxed">
                     {t('bio.description')}
                 </p>
