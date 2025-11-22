@@ -7,19 +7,34 @@
     "rights": "All rights reserved."
   },
   "card": {
-    "professional": "Professional / Work",
-    "projects": "Projects",
+    "professional": "Professional / Work 💼",
+    "projects": "Projects \uD83D\uDCC1",
     "contact": "Contact ☎️",
-    "getInTouch": "Get in Touch",
-
     "portfolio_description": "WIP",
     "linkedin_description": "Connect with my professional profile",
     "github_description": "Work on GitHub",
     "beaky_description": "A Raspberry Pi–powered birdhouse camera + IoT project",
     "getInTouch_description": "Send me an email"
   },
+  "contactForm": {
+    "open": "Get in Touch",
+    "open_description": "Send me an email!",
+    "title": "Contact Me",
+    "description": "Fill out the form below to send me a message.",
+    "emailPlaceholder": "e.g. name@example.com",
+    "messagePlaceholder": "Hi Jere...",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "cancel": "Cancel",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "There was an error sending your message. Please try again later.",
+    "timeMessage": "It's currently {{time}} for me, so I'm {{status}}. I'll get back to you soon.",
+    "awake": "likely awake",
+    "sleeping": "likely asleep"
+  },
   "cta": {
-    "web": "Need a website? Send me a message."
+    "web": "Need a website? Send a message right now!"
   }
 }
-
