@@ -1,6 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, lazy, Suspense } from "react";
 import { useTranslation } from "react-i18next";
-import ContactForm from "@/components/ContactForm.jsx";
 import {
     Dialog,
     DialogContent,
@@ -10,12 +9,17 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog";
 
+const ContactForm = lazy(() => import("@/components/ContactForm.jsx"));
+
 export default function Card() {
     const { t } = useTranslation();
-    const audioRef = useRef(new Audio("/sound/pop.mp3"));
+    const audioRef = useRef(null);
     const [isContactOpen, setContactOpen] = useState(false);
 
     const click = () => {
+        if (!audioRef.current) {
+            audioRef.current = new Audio("/sound/pop.mp3");
+        }
         audioRef.current.currentTime = 0;
         audioRef.current.play();
     };
@@ -74,7 +78,9 @@ export default function Card() {
                                             {t("contactForm.description")}
                                         </DialogDescription>
                                     </DialogHeader>
-                                    <ContactForm onSuccess={handleSuccess} />
+                                    <Suspense fallback={<div className="text-white text-center py-4">Loading...</div>}>
+                                        <ContactForm onSuccess={handleSuccess} />
+                                    </Suspense>
                                 </DialogContent>
                             </Dialog>
                         );

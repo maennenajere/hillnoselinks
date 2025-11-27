@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useForm } from '@formspree/react';
 import { useTranslation } from "react-i18next";
 
@@ -24,21 +24,23 @@ function ContactForm({ onSuccess }) {
         }
     }, [state.succeeded, onSuccess]);
 
-    const now = new Date();
-    const Time = now.toLocaleString('en-US', {
-        timeZone: 'Europe/Helsinki',
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    });
+    const Message = useMemo(() => {
+        const now = new Date();
+        const Time = now.toLocaleString('en-US', {
+            timeZone: 'Europe/Helsinki',
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: true
+        });
 
-    const helsinkiTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Helsinki' }));
-    const hour = helsinkiTime.getHours();
-    const statusKey = (hour >= 7 && hour <= 22)
-        ? 'contactForm.awake'
-        : 'contactForm.sleeping';
-    const status = t(statusKey);
-    const Message = t('contactForm.timeMessage', { time: Time, status });
+        const helsinkiTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Helsinki' }));
+        const hour = helsinkiTime.getHours();
+        const statusKey = (hour >= 7 && hour <= 22)
+            ? 'contactForm.awake'
+            : 'contactForm.sleeping';
+        const status = t(statusKey);
+        return t('contactForm.timeMessage', { time: Time, status });
+    }, [t]);
 
     if (state.succeeded) {
         return (

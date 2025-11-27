@@ -29,7 +29,6 @@ export default function Quotes() {
     }, [])
 
     if (!quote) {
-        console.error("table error")
         return null
     }
 
