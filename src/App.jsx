@@ -6,10 +6,11 @@ import Footer from './components/Footer.jsx'
 import Quote from './components/Quote.jsx'
 import LanguageToggle from './components/LanguageToggle.jsx'
 import { useTranslation } from 'react-i18next'
+import Snowflakes from './components/Snowflakes.jsx'
 
 export default function App() {
     const { t } = useTranslation()
-
+    const showSnowflakes = true
     return (
         <div className="relative bg-black min-h-dvh">
             {/* Background */}
@@ -22,7 +23,7 @@ export default function App() {
             />
 
             <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
-            {/*<ThemeToggle />*/}
+                {/*<ThemeToggle />*/}
                 <LanguageToggle />
             </div>
 
@@ -41,6 +42,7 @@ export default function App() {
                     <Footer />
                 </div>
             </main>
+            {showSnowflakes && <Snowflakes />}
         </div>
     )
 }
