@@ -5,6 +5,7 @@ import Socials from './components/Socials.jsx'
 import Footer from './components/Footer.jsx'
 import Quote from './components/Quote.jsx'
 import LanguageToggle from './components/LanguageToggle.jsx'
+import Badge from './components/Badge.jsx'
 import { useTranslation } from 'react-i18next'
 import Snowflakes from './components/Snowflakes.jsx'
 
@@ -31,6 +32,7 @@ export default function App() {
                 <div className="w-full max-w-md text-center flex flex-col items-center gap-6">
                     <Avatar />
                     <Bio />
+                    <Badge />
                     <Socials />
                     <Card />
 

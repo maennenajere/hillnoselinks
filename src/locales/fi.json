@@ -36,5 +36,9 @@
   },
   "cta": {
     "web": "Tarvitsetko verkkosivuja? Laita heti viestiä!"
+  },
+  "badge": {
+    "label": "Status:",
+    "text": "avoin harjoittelu-, opinnäytetyö- ja junior-tehtäville"
   }
 }
