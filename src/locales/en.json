@@ -36,5 +36,9 @@
   },
   "cta": {
     "web": "Need a website? Send a message right now!"
+  },
+  "badge": {
+    "label": "Status:",
+    "text": "open for internship, thesis work, or junior developer roles"
   }
 }
