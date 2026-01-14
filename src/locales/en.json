@@ -1,10 +1,11 @@
 {
   "bio": {
-    "handle": "@jeremaennena",
+    "handle": "Jere Mäennenä",
     "description": "Full-Stack & Cloud Enthusiast ☕ ICT Engineering Student @ OAMK | 5+ Years Industrial Work Experience | Transitioning to IT"
   },
   "footer": {
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "analytics": "This site uses privacy-friendly, anonymous analytics via"
   },
   "card": {
     "professional": "Professional / Work 💼",
@@ -14,7 +15,9 @@
     "linkedin_description": "Connect with my professional profile",
     "github_description": "Work on GitHub",
     "beaky_description": "A Raspberry Pi–powered birdhouse camera + IoT project",
-    "getInTouch_description": "Send me an email"
+    "getInTouch_description": "Send me an email",
+    "qr": "Generate QR Code",
+    "qr_description": "Privacy-first QR code generator, with instant PNG and SVG exports."
   },
   "contactForm": {
     "open": "Get in Touch",

@@ -27,18 +27,19 @@ export default function Card() {
     };
 
     const items = [
-        { cardTitle: t("card.professional"), title: "Portfolio", description: t("card.portfolio_description"), link: "https://hillnose.xyz" },
-        { cardTitle: "", title: "LinkedIn", description: t("card.linkedin_description"), link: "https://linkedin.com/in/jeremaennena" },
-        { cardTitle: "", title: "GitHub", description: t("card.github_description"), link: "https://github.com/maennenajere" },
-        { cardTitle: t("card.projects"), title: "Beaky", description: t("card.beaky_description"), link: "https://beaknet.eu/" },
-        { cardTitle: t("card.contact"), title: t("contactForm.open"), description: t("contactForm.open_description"), action: "contact" },
-        { cardTitle: "", title: "Telegram", description: "", link: "https://t.me/maeennenae" },
+        { cardTitle: t("card.professional"), title: "Portfolio", description: t("card.portfolio_description"), link: "https://hillnose.xyz", id: "portfolio" },
+        { cardTitle: "", title: "LinkedIn", description: t("card.linkedin_description"), link: "https://linkedin.com/in/jeremaennena", id: "linkedin" },
+        { cardTitle: "", title: "GitHub", description: t("card.github_description"), link: "https://github.com/maennenajere", id: "github" },
+        { cardTitle: t("card.projects"), title: "Beaky", description: t("card.beaky_description"), link: "https://beaknet.eu/", id: "beaky" },
+        { cardTitle: "", title: t("card.qr"), description: t("card.qr_description"), link: "https://hillnose.xyz/qr", id: "qr" },
+        { cardTitle: t("card.contact"), title: t("contactForm.open"), description: t("contactForm.open_description"), action: "contact", id: "contact" },
+        { cardTitle: "", title: "Telegram", description: "Direct message", link: "https://t.me/maeennenae", id: "telegram" },
     ];
 
     return (
         <>
             <div className="w-full space-y-4">
-                {items.map(({ cardTitle, title, description, link, action }) => {
+                {items.map(({ cardTitle, title, description, link, action, id }) => {
                     const content = (
                         <div>
                             {cardTitle && (
@@ -63,6 +64,7 @@ export default function Card() {
                                     <div
                                         onClick={click}
                                         className="cursor-pointer"
+                                        data-umami-event="contact-dialog-open"
                                     >
                                         {content}
                                     </div>
@@ -82,13 +84,14 @@ export default function Card() {
 
                     return (
                         <a
+                            aria-label={title}
                             key={title}
                             href={link}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block"
                             onClick={click}
-                            data-umami-event={`${action || title}-link`}
+                            data-umami-event={`${id}-link`}
                         >
                             {content}
                         </a>

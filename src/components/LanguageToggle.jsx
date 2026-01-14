@@ -14,12 +14,14 @@ export default function LanguageToggle() {
     return (
         <div className="flex gap-2">
             <button
+                aria-label="English"
                 onClick={() => { click(); i18n.changeLanguage('en'); }}
                 className={`text-sm px-2 py-1 rounded transition  ${i18n.language === 'en' ? 'bg-white text-black' : 'bg-transparent border text-white hover:bg-zinc-700 '}`}
             >
                 EN
             </button>
             <button
+                aria-label="Suomi"
                 onClick={() => { click(); i18n.changeLanguage('fi'); }}
                 className={`text-sm px-2 py-1 rounded transition  ${i18n.language === 'fi' ? 'bg-white text-black' : 'bg-transparent border text-white hover:bg-zinc-700 '}`}
             >
