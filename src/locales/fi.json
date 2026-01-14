@@ -1,10 +1,11 @@
 {
   "bio": {
-    "handle": "@jeremaennena",
+    "handle": "Jere Mäennenä",
     "description": "Full-stack- ja pilviteknologioista kiinnostunut ☕ ICT-insinööriopiskelija @ OAMK | Yli 5 vuotta teollista työkokemusta | Siirtymässä IT-alalle"
   },
   "footer": {
-    "rights": "Kaikki oikeudet pidätetään."
+    "rights": "Kaikki oikeudet pidätetään.",
+    "analytics": "Tämä sivusto käyttää yksityisyyttä kunnioittavaa ja anonyymiä analytiikkaa"
   },
   "card": {
     "professional": "Ammatillinen 💼",
@@ -14,7 +15,9 @@
     "linkedin_description": "Ammatillinen profiilini",
     "github_description": "GitHub-sisältö",
     "beaky_description": "Raspberry Pi -pohjainen linnunpönttökamera + IoT-projekti",
-    "getInTouch_description": "Lähetä minulle sähköpostia"
+    "getInTouch_description": "Lähetä minulle sähköpostia",
+    "qr": "Luo QR-koodi",
+    "qr_description": "Yksityisyyttä kunnioittava QR-koodigeneraattori."
   },
   "contactForm": {
     "open": "Ota yhteyttä",

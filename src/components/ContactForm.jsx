@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useForm } from '@formspree/react';
 import { useTranslation } from "react-i18next";
 
 function ContactForm({ onSuccess }) {
-    const [state, handleSubmit] = useForm("mjkjkvvz");
+    const [submitting, setSubmitting] = useState(false);
+    const [succeeded, setSucceeded] = useState(false);
     const [turnstileToken, setTurnstileToken] = useState("");
     const { t } = useTranslation();
 
@@ -19,10 +19,40 @@ function ContactForm({ onSuccess }) {
     }, []);
 
     useEffect(() => {
-        if (state.succeeded && onSuccess) {
+        if (succeeded && onSuccess) {
             onSuccess();
         }
-    }, [state.succeeded, onSuccess]);
+    }, [succeeded, onSuccess]);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setSubmitting(true);
+
+        const formData = new FormData(e.target);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch(import.meta.env.VITE_FORMSPARK_ACTION_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                setSucceeded(true);
+            } else {
+                alert("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            console.error("Form submission error:", error);
+            alert("Something went wrong. Please try again.");
+        } finally {
+            setSubmitting(false);
+        }
+    };
 
     const now = new Date();
     const Time = now.toLocaleString('en-US', {
@@ -40,7 +70,7 @@ function ContactForm({ onSuccess }) {
     const status = t(statusKey);
     const Message = t('contactForm.timeMessage', { time: Time, status });
 
-    if (state.succeeded) {
+    if (succeeded) {
         return (
             <p className="text-orange-400 font-light text-center">
                 {t('contactForm.success')}
@@ -62,6 +92,7 @@ function ContactForm({ onSuccess }) {
                         {t('contactForm.email')}
                     </label>
                     <input
+                        aria-label={t('contactForm.email')}
                         className="h-10 rounded-md border text-sm bg-zinc-800 px-3"
                         id="email"
                         name="email"
@@ -76,6 +107,7 @@ function ContactForm({ onSuccess }) {
                         {t('contactForm.message')}
                     </label>
                     <textarea
+                        aria-label={t('contactForm.message')}
                         className="rounded-md border text-sm px-3 bg-zinc-800 py-2"
                         id="message"
                         name="message"
@@ -89,11 +121,12 @@ function ContactForm({ onSuccess }) {
 
                 <div className="flex flex-row-reverse gap-x-6">
                     <button
+                        aria-label={t('contactForm.send')}
                         className="cursor-pointer rounded-md bg-white px-8 py-4 text-sm font-medium text-zinc-900 hover:bg-orange-400 hover:text-white"
                         type="submit"
-                        disabled={!turnstileToken || state.submitting}
+                        disabled={!turnstileToken || submitting}
                     >
-                        {t('contactForm.send')}
+                        {submitting ? "..." : t('contactForm.send')}
                     </button>
                 </div>
             </form>
