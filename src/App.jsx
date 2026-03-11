@@ -10,7 +10,7 @@ import Snowfall from 'react-snowfall'
 
 export default function App() {
     const { t } = useTranslation()
-    const showSnowflakes = true
+    const showSnowflakes = false
     return (
         <div className="relative min-h-dvh bg-app-background">
             <div className="absolute top-3 right-3 z-20 flex items-center gap-2">
