@@ -7,7 +7,7 @@ export function Avatars() {
             <Avatar className="h-24 w-24">
                 <AvatarImage
                     src={photo}
-                    alt="@maennenajere"
+                    alt="Profile photo"
                     className="w-full h-full object-cover"
                     draggable={false}
                     onContextMenu={(e) => e.preventDefault()}
